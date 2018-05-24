@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="kvm_get_aws_creds" mapIdentifier="aws_creds">
+    <DisplayName>kvm_get_aws_creds</DisplayName>
+    <Properties/>
+    <Get assignTo="private.AWS_KEY" index="1">
+        <Key>
+            <Parameter>AWS_KEY_1</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="private.AWS_SECRET" index="1">
+        <Key>
+            <Parameter>AWS_SECRET</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="private.AWS_GROUP_NAME" index="1">
+        <Key>
+            <Parameter>AWS_GROUP_NAME</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="private.AWS_REGION_NAME" index="1">
+        <Key>
+            <Parameter>AWS_REGION_NAME</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="private.AWS_STREAM_NAME" index="1">
+        <Key>
+            <Parameter>AWS_STREAM_NAME</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

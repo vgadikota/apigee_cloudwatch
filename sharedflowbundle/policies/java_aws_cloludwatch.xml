@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<JavaCallout async="false" continueOnError="false" enabled="true" name="java_aws_cloludwatch">
+    <DisplayName>java_aws_cloludwatch</DisplayName>
+    <Properties/>
+    <ClassName>com.apigee.cloudwatch.log.CloudWatchLoggerInit</ClassName>
+    <ResourceURL>java://cloudwatch-logger.jar</ResourceURL>
+</JavaCallout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="java_aws_cloludwatch" version="SHA-512:104eba01bc83cc0085d97c62535fe75d0663a15b5a82c989db5ff70df029508e1b6f045e01bddeab45ca194640ac5257e4a8b2012187d624534fb2e9d1a28e10"/>
+        <VersionInfo resourceName="kvm_get_aws_creds" version="SHA-512:4ddb4922e38f43e0c7ed31cae0a85c8e56296754d3d439eb0c9d1e996f5d6750f6a3f1d4af0aa7f074fee3424b6453acff7ddf3272a39eef361a6d9e7a24e14c"/>
+    </Policies>
+    <ProxyEndpoints/>
+    <Resources>
+        <VersionInfo resourceName="java://cloudwatch-logger.jar" version="SHA-512:e25837b2a6fe4b81d22e093a16dd5889f6a6ce0b5aa6c63e6618b26d8adc9842f5c01b60bed5a1b8ef3294e605e4bc61cfc1b0d5aa1ee6b7be94fe91593bf78b"/>
+    </Resources>
+    <SharedFlows>
+        <VersionInfo resourceName="default" version="SHA-512:a8b1818c928e33a6fa9d84fb1408882d45ad62e3b997a6e52f387b9337997907be8859384e13cf639912036cf372a3b9f0a2864be15062e1ccbab5f733559716"/>
+    </SharedFlows>
+    <TargetEndpoints/>
+</Manifest>
