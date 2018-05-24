@@ -13,50 +13,6 @@ import com.eclipsesource.json.JsonObject;
 
 public class CloudWatchLoggerInit implements Execution{
 
-	/*public static void main(String[] args) {
-		CloudWatchLog cloudWatchLog = new CloudWatchLog();
-		cloudWatchLog.setGroupName("Apigee-demo-group-1");
-		cloudWatchLog.setAcessKeyId("AKIAJ5N4MTHI53DSQXVQ");
-		cloudWatchLog.setSecretKey("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");
-		cloudWatchLog.setRegion("us-east-2");
-		cloudWatchLog.setStreamName("Apigee-demo-stream-1");
-		
-		JsonObject root = new JsonObject();
-		root.add("organization", "amer-poc12");
-		root.add("environment", "test");
-		root.add("apiProduct", "Hello");
-		root.add("proxyName", "payment-v1");
-		root.add("appName", "Hello");
-		root.add("verb", "POST");
-		root.add("url", "https://amer-poc12-prod.apigee.net/guardian/v1/payments");
-		root.add("responseReason", "OK");
-		root.add("clientLatency", 3);
-		root.add("targetLatency", 3);
-		root.add("totalLatency", 3);
-		root.add("pathsuffix", "/payments");
-		root.add("environment.name", "test");
-		root.add("apiproxy.revision", "5");
-		root.add("apigee.client_id", "null");
-		root.add("apigee.developer.app.name", "null");
-		root.add("request.header.X-Forwarded-For", "null");
-		root.add("client.received.start.timestamp", System.currentTimeMillis());
-		root.add("client.sent.end.timestamp", System.currentTimeMillis());
-		root.add("message.status.code", "200");
-		root.add("response.status.code", "200");
-		root.add("request.header.Accept", "application/json");
-		root.add("request.queryparam.tokenValidityInMin", "3600");
-		root.add("request.header.contentLength", "20");
-		root.add("request.queryparam.correlationId", "ACMEXAWQE123409876");
-		
-		System.out.println(root.toString());
-		try {
-			cloudWatchLog.put(root.toString());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}*/
 
 	@Override
 	public ExecutionResult execute(MessageContext msgCtxt, ExecutionContext execCtxt) {
@@ -94,19 +50,13 @@ public class CloudWatchLoggerInit implements Execution{
             long total_target_time  = target_end_time-target_start_time;
             long total_client_time  = total_request_time-total_target_time;
             
-          /*  CloudWatchLog cloudWatchLog = new CloudWatchLog();
-    		cloudWatchLog.setGroupName("Apigee-demo-group-1"msgCtxt.getVariable("private.AWS_GROUP_NAME").toString());
-    		cloudWatchLog.setAcessKeyId("AKIAJ5N4MTHI53DSQXVQ"msgCtxt.getVariable("private.AWS_KEY_1").toString());
-    		cloudWatchLog.setSecretKey("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"msgCtxt.getVariable("private.AWS_SECRET").toString());
-    		cloudWatchLog.setRegion("us-east-2"msgCtxt.getVariable("private.AWS_REGION_NAME").toString());
-    		cloudWatchLog.setStreamName("Apigee-demo-stream-1"msgCtxt.getVariable("private.AWS_STREAM_NAME").toString());*/
-    		
-    		CloudWatchLog cloudWatchLog = new CloudWatchLog();
-    		cloudWatchLog.setGroupName("Apigee-demo-group-1");
-    		cloudWatchLog.setAcessKeyId("AKIAJ5N4MTHI53DSQXVQ");
-    		cloudWatchLog.setSecretKey("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");
-    		cloudWatchLog.setRegion("us-east-2");
-    		cloudWatchLog.setStreamName("Apigee-demo-stream-1");
+          CloudWatchLog cloudWatchLog = new CloudWatchLog();
+    		cloudWatchLog.setGroupName(msgCtxt.getVariable("private.AWS_GROUP_NAME").toString());
+    		cloudWatchLog.setAcessKeyId(msgCtxt.getVariable("private.AWS_KEY_1").toString());
+    		cloudWatchLog.setSecretKey(msgCtxt.getVariable("private.AWS_SECRET").toString());
+    		cloudWatchLog.setRegion(msgCtxt.getVariable("private.AWS_REGION_NAME").toString());
+    		cloudWatchLog.setStreamName(msgCtxt.getVariable("private.AWS_STREAM_NAME").toString());
+    	
     		
     		JsonObject root = new JsonObject();
     		if(null!=msgCtxt.getVariable("organization.name")) {
